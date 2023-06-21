@@ -13,7 +13,7 @@ in the early development/prototype stage and is not yet ready for use.
 
 Wyrm depends on LLVM to compile. The easiest way to get LLVM is to download the
 binaries from [llvm.org](https://llvm.org). Wyrm requires LLVM version
-15.0.6, and will not compile against another version. Download
+@WYRM_LLVM_VERSION_REQ@, and will not compile against another version. Download
 and extract the matching version of LLVM binaries. Provide the path to the CMake
 build system with the `LLVM_DIR` variable, like:
 

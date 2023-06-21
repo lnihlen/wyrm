@@ -1,0 +1,38 @@
+# Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+# -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
+project = 'Wyrm'
+copyright = '2022-2023, Lucile Rose Nihlen'
+author = 'Lucile Rose Nihlen'
+version = '@PROJECT_VERSION@'
+release = 'v@PROJECT_VERSION@ @GIT_COMMIT_HASH@'
+
+rst_prolog = """
+.. |wyrm_llvm_version_req| replace:: @WYRM_LLVM_VERSION_REQ@
+"""
+
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+extensions = []
+
+templates_path = ['_templates']
+exclude_patterns = []
+
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+from better import better_theme_path
+html_theme_path = [better_theme_path]
+html_theme = 'better'
+
+html_static_path = ['@PROJECT_SOURCE_DIR@/docs/static']
+html_short_title = "Home"
+html_sidebars = {
+    '**': ['localtoc.html', 'sourcelink.html', 'searchbox.html'],
+}
